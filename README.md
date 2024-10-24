@@ -18,12 +18,20 @@ Activation de l'environnement virtuel (sous Windows). Attention, il faut que Win
 **Une fois l'environnement virtuel activé, l'invite de commande doit commencer par (env).**
 
 Installation de Django dans l'environnement virtuel
+
 ```shell
 (env) my_project_folder> pip install django
 ```
 
 Création d'un fichier pip "requirements.txt" qui liste les dépendance
+
 ```shell
 > pip freeze > requirements.txt
 ```
 
+## Initialisation d'un projet Django
+
+Génération automatique du code de base Django (gabarit)
+```shell
+(env) my_project_folder> django-admin startproject <project-name>
+```
