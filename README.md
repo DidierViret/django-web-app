@@ -20,7 +20,7 @@ Activation de l'environnement virtuel (sous Windows). Attention, il faut que Win
 Installation de Django dans l'environnement virtuel
 
 ```shell
-(env) my_project_folder> pip install django
+(env) > pip install django
 ```
 
 Création d'un fichier pip "requirements.txt" qui liste les dépendance
@@ -33,5 +33,18 @@ Création d'un fichier pip "requirements.txt" qui liste les dépendance
 
 Génération automatique du code de base Django (gabarit)
 ```shell
-(env) my_project_folder> django-admin startproject <project-name>
+(env) > django-admin startproject <project-name>
+```
+Le fichier manage.py peut maintenant être utilisé pour lancer des commandes Django spécifiques au projet, à la place de la commande django-admin qui est plus générique.
+
+## Démarrage du serveur de développement
+
+```shell
+(env) > python manage.py runserver
+```
+
+## Création de la base de données
+
+```shell
+(env) > python manage.py migrate
 ```
