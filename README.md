@@ -29,7 +29,7 @@ Création d'un fichier pip "requirements.txt" qui liste les dépendance
 > pip freeze > requirements.txt
 ```
 
-## Initialisation d'un projet Django
+### Initialisation d'un projet Django
 
 Génération automatique du code de base Django (gabarit)
 ```shell
@@ -37,14 +37,38 @@ Génération automatique du code de base Django (gabarit)
 ```
 Le fichier manage.py peut maintenant être utilisé pour lancer des commandes Django spécifiques au projet, à la place de la commande django-admin qui est plus générique.
 
-## Démarrage du serveur de développement
+### Démarrage du serveur de développement
 
 ```shell
 (env) > python manage.py runserver
 ```
 
-## Création de la base de données
+### Création de la base de données
 
 ```shell
 (env) > python manage.py migrate
+```
+
+### Initialisation d'une application
+Une application peut être comparée à un module du projet Django. Une application peut éventuellement être réutilisée dans plusieurs projets.
+
+Création de l'application
+```shell
+(env) > python manage.py startapp <application-name>
+```
+
+L'application doit ensuite être mentionnée dans le fichier settings.py qui se trouve dans le répertoire du projet (le sous-répertoire qui porte le même nom que le répertoire principal).
+
+Ajout de l'application dans INSTALLED_APPS du fichier settings.py
+Création de l'application
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'listings',
+]
 ```
