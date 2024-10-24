@@ -72,3 +72,19 @@ INSTALLED_APPS = [
     'listings',
 ]
 ```
+
+## Migrations
+
+### Générer un fichier de migration
+Après avoir créé des modèles dans models.py, un fichier de migration peut être créé par une ligne de commande. Il contiendra toutes les modifications qui ont été trouvées dans models.py depuis le dernier fichier réalisé.
+
+```shell
+(env) > python manage.py makemigrations
+```
+
+### Exécuter les fichiers de migration pour les appliquer à la BD
+Une fois le ou les fichiers de migration créés, les instructions peuvent être appliquées à la base de données afin de la créer ou la modifier.
+
+```shell
+(env) > python manage.py migrate
+```
