@@ -61,12 +61,6 @@ Le fichier manage.py peut maintenant être utilisé pour lancer des commandes Dj
 (env) > python manage.py runserver
 ```
 
-### Création de la base de données
-
-```shell
-(env) > python manage.py migrate
-```
-
 ### Initialisation d'une application
 Une application peut être comparée à un module du projet Django. Une application peut éventuellement être réutilisée dans plusieurs projets.
 
