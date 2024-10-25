@@ -2,14 +2,27 @@
 Notes prises sur le cours OpenClassrooms
 
 ## Installation
-Déplacement dans le dossier du projet et installation d'un environnement virtuel
+
+### Création de l'environnement
+Déplacement dans le dossier du projet et création d'un environnement virtuel
 
 ```shell
 > cd <my_project_folder>
 > python -m venv env
 ```
 
-Activation de l'environnement virtuel (sous Windows). Attention, il faut que Windows autorise l'exécution de script, voir cette documentation : [https://go.microsoft.com/fwlink/?LinkID=135170](https://go.microsoft.com/fwlink/?LinkID=135170)
+### Autorisation de l'exécution de scrpits sous Windows
+Pour pouvoir exécuter les scrpits d'activation de l'environnement virtuel, il faut que Windows autorise l'exécution de scripts.
+Les explications détaillées sont données dans cette documentation : [https://go.microsoft.com/fwlink/?LinkID=135170](https://go.microsoft.com/fwlink/?LinkID=135170)
+
+Ouvrir une fenêtre Powershell en mode administrateur et exécuter la commande suivantes :
+
+```shell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+```
+
+### Activation de l'environnement sous Windows
+Maintenant que l'exécution de scripts est autorisée, l'environnement virtuel peut être activé avec la commande suivante :
 
 ```shell
 > .\env\Scripts\activate
@@ -17,8 +30,7 @@ Activation de l'environnement virtuel (sous Windows). Attention, il faut que Win
 ```
 **Une fois l'environnement virtuel activé, l'invite de commande doit commencer par (env).**
 
-Installation de Django dans l'environnement virtuel
-
+### Installation de Django dans l'environnement virtuel
 ```shell
 (env) > pip install django
 ```
@@ -26,7 +38,13 @@ Installation de Django dans l'environnement virtuel
 Création d'un fichier pip "requirements.txt" qui liste les dépendance
 
 ```shell
-> pip freeze > requirements.txt
+(env) > pip freeze > requirements.txt
+```
+
+La commande pip install permet de réinstaller les mêmes dépendances dans d'autres environnements en se basant sur le fichier requirements.txt
+
+```shell
+(env) > pip install -r .\requirements.txt
 ```
 
 ### Initialisation d'un projet Django
