@@ -100,3 +100,19 @@ Une fois le ou les fichiers de migration créés, les instructions peuvent être
 ```shell
 (env) > python manage.py migrate
 ```
+
+## Utilisation du shell de Python
+Les commandes shell permettent d'exécuter du code Python "à la volée", par exemple pour insérer des données de test dans la BD.
+
+Démarrer le shell
+```shell
+(env) > python manage.py shell
+```
+
+Importer un modèle et l'utiliser pour introduire des éléments dans la base de données
+```shell
+>>> from myapplication.models import Band
+>>> band = Band()
+>>> band.name = "Foo fighters"
+>>> band.save()
+```
